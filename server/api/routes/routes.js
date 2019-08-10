@@ -29,5 +29,5 @@ module.exports = app => {
 
   app
     .route("/api/product/articles_by_id")
-    .post(productController.getArticlesById);
+    .get(productController.getArticlesById);
 };
