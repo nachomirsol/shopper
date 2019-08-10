@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
 mongoose.connect(
-  process.env.DATABASE,
+  "mongodb://localhost:27017/shopper",
   { useNewUrlParser: true },
   (err, res) => {
     if (err) throw err;
@@ -190,7 +190,7 @@ app.get("/api/user/logout", auth, (req, res) => {
   });
 });
 
-const port = process.env.PORT;
+const port = 5000;
 
 app.listen(port, () => {
   console.log(`Server running at port ${port}`);
