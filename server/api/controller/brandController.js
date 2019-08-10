@@ -22,5 +22,6 @@ getBrands = (req, res) => {
 };
 
 module.exports = {
-  postBrand
+  postBrand,
+  getBrands
 };

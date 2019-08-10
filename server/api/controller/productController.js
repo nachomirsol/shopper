@@ -2,6 +2,9 @@ const mongoose = require("mongoose");
 
 const { Product } = require("../models/product");
 
+const { auth } = require("../middleware/auth");
+const { admin } = require("../middleware/admin");
+
 getArticles = (req, res) => {
   let order = req.query.order ? req.body.order : "asc"; // REVIEW
   let sortBy = req.query.sortBy ? req.query.sortBy : "_id"; // REVIEW

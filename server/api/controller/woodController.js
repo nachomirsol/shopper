@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const { Wood } = require("./models/wood");
+const { Wood } = require("../models/wood");
 
-const postWood = (req, res) => {
+postWood = (req, res) => {
   const wood = new Wood(req.body);
 
   wood.save((err, doc) => {

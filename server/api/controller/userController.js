@@ -61,7 +61,7 @@ userAuth = (req, res) => {
 };
 
 module.exports = {
-  registerUser,
+  userRegister,
   userLogin,
   userLogout,
   userAuth
